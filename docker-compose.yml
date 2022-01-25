@@ -1,0 +1,21 @@
+version: "3.3"
+
+#
+# - start:
+# docker-compose up
+#
+# - connect:
+#  docker-compose run server bash
+#
+# - stop:
+# docker-compose down
+#
+
+services:
+  server:
+    # apache - https://hub.docker.com/_/httpd
+    image: ubuntu
+    ports:
+      - 80:80
+      - 8011:80
+    tty: true
